@@ -120,9 +120,33 @@ window.openGame = (id) => {
     modalTitle.textContent = game.title;
     modalCategory.textContent = `${game.category}_MODULE_ACTIVE`;
     modalDescription.textContent = game.description;
-    modalFrame.setAttribute('allow', 'autoplay; focus-without-user-activation; fullscreen; gamepad; microphone; midi; xr-spatial-tracking; screen-wake-lock');
-    modalFrame.setAttribute('sandbox', 'allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin');
-    modalFrame.src = game.url;
+
+    // Cleanup previous state
+    const existingPlayer = document.getElementById('ruffle-player');
+    if (existingPlayer) existingPlayer.remove();
+    modalFrame.classList.remove('hidden');
+
+    if (game.isFlash) {
+        modalFrame.classList.add('hidden');
+        modalFrame.src = '';
+        
+        if (window.RufflePlayer) {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            player.id = 'ruffle-player';
+            player.style.width = '100%';
+            player.style.height = '100%';
+            modalFrame.parentNode.appendChild(player);
+            player.load(game.url);
+        } else {
+            modalDescription.textContent = 'RUFFLE_EMULATOR_MISSING';
+        }
+    } else {
+        modalFrame.setAttribute('allow', 'autoplay; focus-without-user-activation; fullscreen; gamepad; microphone; midi; xr-spatial-tracking; screen-wake-lock');
+        modalFrame.setAttribute('sandbox', 'allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin');
+        modalFrame.src = game.url;
+    }
+
     gameModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 };
@@ -130,6 +154,8 @@ window.openGame = (id) => {
 closeBtn.addEventListener('click', () => {
     gameModal.classList.add('hidden');
     modalFrame.src = '';
+    const existingPlayer = document.getElementById('ruffle-player');
+    if (existingPlayer) existingPlayer.remove();
     document.body.style.overflow = '';
 });
 

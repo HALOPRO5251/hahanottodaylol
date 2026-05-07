@@ -12,16 +12,8 @@
     "title": "Retro Bowl",
     "category": "Sports",
     "thumbnail": "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?auto=format&fit=crop&q=80&w=800",
-    "url": "https://game312354-dot-unblockedgamesforu.appspot.com/retro-bowl/",
+    "url": "https://game316009.konggames.com/gamez/0031/6009/live/index.html",
     "description": "The perfect game for the armchair quarterback. Manage your team and lead them to glory!"
-  },
-  {
-    "id": "drive-mad",
-    "title": "Drive Mad",
-    "category": "Driving",
-    "thumbnail": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800",
-    "url": "https://vseigru.net/games/drive-mad/index.html",
-    "description": "Drive your car through challenging obstacles in this physics-based racing game."
   },
   {
     "id": "basketball-stars",
@@ -36,15 +28,66 @@
     "title": "Subway Surfers",
     "category": "Action",
     "thumbnail": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&q=80&w=800",
-    "url": "https://cdn.gamesflare.com/embed/subway-surfers/",
+    "url": "https://html5.gamedistribution.com/rvvASMiM/79a7e528f37b41cb98b85bac9cb17ae3/index.html?gd_sdk_referrer_url=https%3A%2F%2Fwww.y8.com%2Fgames%2Ftrain_surfers&key=y8&value=default&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy55OC5jb20vZ2FtZXMvdHJhaW5fc3VyZmVycyIsInBhcmVudERvbWFpbiI6Ink4LmNvbSIsInRvcERvbWFpbiI6Ink4LmNvbSIsImhhc0ltcHJlc3Npb24iOmZhbHNlLCJsb2FkZXJFbmFibGVkIjp0cnVlLCJob3N0IjoiaHRtbDUuZ2FtZWRpc3RyaWJ1dGlvbi5jb20iLCJ2ZXJzaW9uIjoiMS41LjE4In0%3D",
     "description": "Dodge trains and escape the inspector in this classic endless runner."
   },
   {
-    "id": "cookie-clicker",
-    "title": "Cookie Clicker",
-    "category": "Relax",
-    "thumbnail": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=800",
-    "url": "https://orteil.dashnet.org/cookieclicker/",
-    "description": "Click the cookie to build a baking empire. The ultimate idle game."
+    "id": "mine-online",
+    "title": "Mine Online",
+    "category": "Adventure",
+    "thumbnail": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80&w=800",
+    "url": "https://storage.y8.com/y8-studio/unity_webgl/MirraGames/mine_online_v2/?key=y8&value=default",
+    "description": "Explore, build, and survive in this browser-based voxel block world."
+  },
+  {
+    "id": "earn-to-die",
+    "title": "Earn to Die",
+    "category": "Driving",
+    "thumbnail": "https://images.unsplash.com/photo-1594735297182-47b681467ba7?auto=format&fit=crop&q=80&w=800",
+    "url": "https://img.y8.com/cloud/y8-flash-game/contents/item_versions/flash_games/38760/original/earn_to_die_v1.swf?1521515138",
+    "isFlash": true,
+    "description": "Upgrade your car and drive through hordes of zombies to reach your destination."
+  },
+  {
+    "id": "2048",
+    "title": "2048 Classic",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1549488344-cbb6c34ce08b?auto=format&fit=crop&q=80&w=800",
+    "url": "https://storage.y8.com/y8-studio/html5/Gani/2048/?key=y8&value=default",
+    "description": "Join the numbers to get to the 2048 tile in this addictive puzzle masterpiece."
+  },
+  {
+    "id": "tunnel-rush",
+    "title": "Tunnel Rush",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+    "url": "https://img.y8.com/cloud/y8-flash-game/contents/item_versions/flash_games/843/original/tunnel_rush_.swf?1521282585",
+    "isFlash": true,
+    "description": "Fasten your seatbelt and get ready for a fast-paced tunnel race!"
+  },
+  {
+    "id": "moto-x3m",
+    "title": "Moto X3M",
+    "category": "Driving",
+    "thumbnail": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800",
+    "url": "https://storage.y8.com/y8-studio/html5/madpuffers/MotoX3M_1_new/?key=2365427&value=87599",
+    "description": "Perform amazing stunts and race your motorcycle through challenging levels."
+  },
+  {
+    "id": "fireboy-watergirl",
+    "title": "Fireboy & Watergirl",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800",
+    "url": "https://html5.gamedistribution.com/rvvASMiM/a55c9cc9c21e4fc683c8c6857f3d0c75/index.html?gd_sdk_referrer_url=https%3A%2F%2Fwww.y8.com%2Fgames%2Ffireboy_and_watergirl_forest_temple&key=y8&value=default&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy55OC5jb20vZ2FtZXMvZmlyZWJveV9hbmRfd2F0ZXJnaXJsX2ZvcmVzdF90ZW1wbGUiLCJwYXJlbnREb21haW4iOiJ5OC5jb20iLCJ0b3BEb21haW4iOiJ5OC5jb20iLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS4xOCJ9",
+    "description": "Control both characters to overcome puzzles and reach the exit in the Forest Temple."
+  },
+  {
+    "id": "g-switch-3",
+    "title": "G-Switch 3",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&q=80&w=800",
+    "url": "https://img.y8.com/cloud/y8-flash-game/contents/item_versions/flash_games/79951/original/g_switch_3.swf?1522162002",
+    "isFlash": true,
+    "description": "Defy gravity and run as far as you can in this high-speed skill game."
   }
 ]

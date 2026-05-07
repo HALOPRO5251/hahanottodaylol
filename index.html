@@ -3,11 +3,189 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Nova Arcade | Unblocked Games</title>
+    <!-- Tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      @theme {
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+      }
+      body { background-color: #0A0A0A; color: white; }
+      .selection-green ::selection { background: #00FF00; color: black; }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="selection-green font-sans">
+    <div id="root" class="min-h-screen bg-[#0A0A0A]">
+      <!-- Header -->
+      <header class="border-b border-[#222] bg-[#0A0A0A]/80 backdrop-blur-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-[#00FF00] flex items-center justify-center rounded-sm">
+              <i data-lucide="gamepad-2" class="text-black w-5 h-5"></i>
+            </div>
+            <div class="flex flex-col -space-y-1">
+              <h1 class="text-xl font-black uppercase tracking-tighter leading-none">
+                Nova<span class="text-[#00FF00]">Arcade</span>
+              </h1>
+              <span class="text-[8px] font-mono text-[#444] tracking-[0.3em] uppercase pl-1">Unblocked_Access</span>
+            </div>
+          </div>
+
+          <div class="flex-1 max-w-xl relative">
+            <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 text-[#444] w-4.5 h-4.5"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search games..."
+              class="w-full bg-[#111] border border-[#222] rounded-none py-2 pl-10 pr-4 focus:outline-none focus:border-[#00FF00] transition-colors text-sm font-mono placeholder:text-[#333]"
+            />
+          </div>
+
+          <div class="flex items-center gap-6">
+            <button class="hidden md:flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#666] hover:text-[#00FF00] transition-colors group">
+              <i data-lucide="history" class="w-3.5 h-3.5 group-hover:rotate-[-45deg] transition-transform"></i> History
+            </button>
+            <button class="hidden md:flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#666] hover:text-[#00FF00] transition-colors group">
+              <i data-lucide="heart" class="w-3.5 h-3.5 group-hover:scale-125 transition-transform"></i> Saved
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-8">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-48 shrink-0 space-y-8">
+          <div>
+            <h2 class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#444] mb-4 border-b border-[#222] pb-1">Categories</h2>
+            <div id="category-list" class="flex flex-wrap md:flex-col gap-1">
+              <!-- Categories injected by JS -->
+            </div>
+          </div>
+
+          <div class="hidden md:block">
+            <h2 class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#444] mb-4 border-b border-[#222] pb-1">Telemetry</h2>
+            <div class="space-y-4">
+              <div class="bg-[#111] p-3 border border-[#222]">
+                <div class="text-[9px] text-[#444] uppercase mb-1">Grid_Status</div>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00FF00] shadow-[0_0_8px_#00FF00]"></span>
+                  Active
+                </div>
+              </div>
+              <div class="bg-[#111] p-3 border border-[#222]">
+                <div class="text-[9px] text-[#444] uppercase mb-1">Latency</div>
+                <div class="text-[10px] font-mono text-[#00FF00]">12ms</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Grid -->
+        <main class="flex-1">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center gap-3">
+              <i data-lucide="layout-grid" class="text-[#00FF00] w-4.5 h-4.5"></i>
+              <h2 class="text-xl font-black uppercase tracking-tighter skew-x-[-10deg]">
+                Active_Registry
+              </h2>
+            </div>
+            <div id="game-count" class="text-[10px] font-mono text-[#444] bg-[#111] px-2 py-1 border border-[#222]">
+              SEARCHING...
+            </div>
+          </div>
+
+          <div id="game-grid" class="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            <!-- Games injected by JS -->
+          </div>
+        </main>
+      </div>
+
+      <!-- Footer -->
+      <footer class="border-t border-[#111] mt-32 bg-[#050505] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+          <div class="grid md:grid-cols-4 gap-12">
+            <div class="md:col-span-2 space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-white flex items-center justify-center rounded-sm">
+                  <i data-lucide="gamepad-2" class="text-black w-5 h-5"></i>
+                </div>
+                <h1 class="text-2xl font-black uppercase tracking-tighter">Nova<span class="text-[#00FF00]">Arcade</span></h1>
+              </div>
+              <p class="text-xs text-[#555] leading-relaxed max-w-sm font-medium">
+                Autonomous gaming terminal delivering low-latency, high-impact entertainment units to distributed systems worldwide.
+              </p>
+            </div>
+            
+            <div class="space-y-6">
+              <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#00FF00]">Directory</h4>
+              <nav class="flex flex-col gap-3 text-[11px] font-bold uppercase tracking-widest text-[#444]">
+                <a class="hover:text-white transition-colors cursor-pointer">Internal_Index</a>
+                <a class="hover:text-white transition-colors cursor-pointer">System_Updates</a>
+              </nav>
+            </div>
+
+            <div class="space-y-6">
+              <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#00FF00]">Legal</h4>
+              <nav class="flex flex-col gap-3 text-[11px] font-bold uppercase tracking-widest text-[#444]">
+                <a class="hover:text-white transition-colors cursor-pointer">Privacy_Schema</a>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="mt-20 pt-8 border-t border-[#111] flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-[#333]">
+            <div class="tracking-[0.2em] uppercase">© 2026 NOVA_SYSTEMS</div>
+            <div class="flex gap-6">
+              <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#00FF00]"></span> STATUS: ONLINE</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Game Modal -->
+    <div id="game-modal" class="fixed inset-0 z-50 bg-black flex flex-col hidden">
+      <div class="h-14 border-b border-[#222] px-4 flex items-center justify-between shrink-0 bg-[#0A0A0A]">
+        <div class="flex items-center gap-6">
+          <button id="close-modal" class="group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[#666] hover:text-white transition-colors">
+            <i data-lucide="x" class="text-[#00FF00] w-4 h-4"></i>
+            <span>Exit_Process</span>
+          </button>
+          <div class="w-[1px] h-6 bg-[#222]"></div>
+          <div>
+            <h3 id="modal-title" class="text-xs font-black uppercase tracking-tight">GAME_TITLE</h3>
+            <div class="flex items-center gap-2">
+              <span class="w-1 h-1 rounded-full bg-[#00FF00]"></span>
+              <p id="modal-category" class="text-[8px] uppercase font-mono text-[#444]">CATEGORY_MODULE_ACTIVE</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="h-8 w-8 flex items-center justify-center bg-[#111] border border-[#222] hover:text-[#00FF00] transition-colors">
+            <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 bg-[#050505] relative overflow-hidden">
+        <iframe id="modal-frame" src="" class="w-full h-full border-none relative z-10" allowfullscreen></iframe>
+      </div>
+      <div class="px-6 py-3 border-t border-[#222] bg-[#0A0A0A] shrink-0">
+        <div class="max-w-7xl mx-auto flex items-center justify-between text-[10px] font-mono text-[#444] uppercase">
+          <div id="modal-description">Desc_Readout: ...</div>
+          <div class="flex gap-8">
+            <div><span class="text-[#00FF00]">FPS</span> 60.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+      // Initialize icons
+      lucide.createIcons();
+    </script>
   </body>
 </html>
 

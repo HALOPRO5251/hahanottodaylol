@@ -120,6 +120,8 @@ window.openGame = (id) => {
     modalTitle.textContent = game.title;
     modalCategory.textContent = `${game.category}_MODULE_ACTIVE`;
     modalDescription.textContent = game.description;
+    modalFrame.setAttribute('allow', 'autoplay; focus-without-user-activation; fullscreen; gamepad; microphone; midi; xr-spatial-tracking; screen-wake-lock');
+    modalFrame.setAttribute('sandbox', 'allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin');
     modalFrame.src = game.url;
     gameModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';

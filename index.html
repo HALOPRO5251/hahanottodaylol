@@ -13,12 +13,50 @@
         --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
         --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
       }
-      body { background-color: #0A0A0A; color: white; }
+      body { background-color: #050505; color: white; }
       .selection-green ::selection { background: #00FF00; color: black; }
+      
+      /* CRT/Scanline Effect */
+      .scanline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(18, 16, 16, 0) 50%,
+          rgba(0, 0, 0, 0.1) 50%
+        );
+        background-size: 100% 4px;
+        z-index: 100;
+        pointer-events: none;
+        opacity: 0.2;
+      }
+      
+      /* Subtle noise */
+      .noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        z-index: 101;
+        pointer-events: none;
+      }
+
+      .glow-text {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+      }
     </style>
   </head>
-  <body class="selection-green font-sans">
-    <div id="root" class="min-h-screen bg-[#0A0A0A]">
+  <body class="selection-green font-sans relative">
+    <div class="scanline"></div>
+    <div class="noise"></div>
+    
+    <div id="root" class="min-h-screen bg-[#050505]">
       <!-- Header -->
       <header class="border-b border-[#222] bg-[#0A0A0A]/80 backdrop-blur-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">

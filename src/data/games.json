@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1628527302489-34bb322b97dc?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://play2048.co/",
+    "description": "Join the numbers and get to the 2048 tile!"
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "category": "Arcade",
+    "thumbnail": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://hextris.io/",
+    "description": "Fast-paced puzzle game inspired by Tetris."
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://v6p9d9t4.ssl.hwcdn.net/html/1454418/index.html",
+    "description": "Speed down the slope in this endless runner."
+  },
+  {
+    "id": "cookie-clicker",
+    "title": "Cookie Clicker",
+    "category": "Idle",
+    "thumbnail": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://orteil.dashnet.org/cookieclicker/",
+    "description": "The original idle game where you bake cookies."
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1605142127145-8f64582f3493?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://tetris.com/play-tetris",
+    "description": "The classic block-stacking puzzle game."
+  },
+  {
+    "id": "flappy-bird",
+    "title": "Flappy Bird",
+    "category": "Arcade",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://flappybird.io/",
+    "description": "Fly through pipes without crashing."
+  },
+  {
+    "id": "geometry-dash",
+    "title": "Lite Dash",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://geometry-lite.github.io/",
+    "description": "Jump and fly your way through danger in this rhythm-based action platformer!"
+  },
+  {
+    "id": "wordle",
+    "title": "Wordle",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1635313936081-3705977a4128?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://www.nytimes.com/games/wordle/index.html",
+    "description": "Guess the hidden word in 6 tries."
+  },
+  {
+    "id": "pacman",
+    "title": "Pac-Man",
+    "category": "Classic",
+    "thumbnail": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?q=80&w=400&h=300&auto=format&fit=crop",
+    "url": "https://video-games.github.io/pacman/",
+    "description": "The classic maze-chase video game."
+  }
+]
